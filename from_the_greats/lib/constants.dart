@@ -6,3 +6,5 @@ const headerMultiPageTextStyle = TextStyle(
   fontFamily: 'Satisfy',
   fontSize: 20.0,
 );
+
+const descriptionMultiPageTextStyle = TextStyle(fontFamily: 'Serif Pro');
