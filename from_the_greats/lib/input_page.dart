@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:from_the_greats/mandela.dart';
 
 const kPictureBackgroundColor = Color(0xFF1D1E33);
 
@@ -32,12 +33,18 @@ class _InputPageState extends State<InputPage> {
                     children: [
                       Expanded(
                         child: CommonCard(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/one');
+                          },
                           color: kPictureBackgroundColor,
                           image: Image.asset('images/nikolaTesla.png'),
                         ),
                       ),
                       Expanded(
                         child: CommonCard(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/two');
+                          },
                           color: kPictureBackgroundColor,
                           image: Image.asset('images/albertEinstein.png'),
                         ),
@@ -51,12 +58,18 @@ class _InputPageState extends State<InputPage> {
                     children: [
                       Expanded(
                         child: CommonCard(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/three');
+                          },
                           color: kPictureBackgroundColor,
                           image: Image.asset('images/nelsonMandela.png'),
                         ),
                       ),
                       Expanded(
                         child: CommonCard(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/four');
+                          },
                           color: kPictureBackgroundColor,
                           image: Image.asset('images/bobMarley.png'),
                         ),
@@ -76,17 +89,21 @@ class _InputPageState extends State<InputPage> {
 class CommonCard extends StatelessWidget {
   late Color? color;
   late Image? image;
+  late Function()? onPressed;
 
-  CommonCard({@required this.color, this.image});
+  CommonCard({@required this.color, this.image, @required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(15.0),
-      child: image,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: color,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        margin: const EdgeInsets.all(15.0),
+        child: image,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: color,
+        ),
       ),
     );
   }
