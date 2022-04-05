@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:from_the_greats/mandela.dart';
-
-const kPictureBackgroundColor = Color(0xFF1D1E33);
+import 'commonCard.dart';
+import 'constants.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -81,29 +81,6 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CommonCard extends StatelessWidget {
-  late Color? color;
-  late Image? image;
-  late Function()? onPressed;
-
-  CommonCard({@required this.color, this.image, @required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        margin: const EdgeInsets.all(15.0),
-        child: image,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: color,
-        ),
       ),
     );
   }
