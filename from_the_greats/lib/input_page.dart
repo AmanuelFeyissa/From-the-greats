@@ -19,7 +19,7 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(
             child: CommonCard(
-              color: Color(0xFF1D1E33),
+              color: Color(0xFF584389),
             ),
           ),
           Expanded(
@@ -33,11 +33,13 @@ class _InputPageState extends State<InputPage> {
                       Expanded(
                         child: CommonCard(
                           color: kPictureBackgroundColor,
+                          image: Image.asset('images/nikolaTesla.png'),
                         ),
                       ),
                       Expanded(
                         child: CommonCard(
                           color: kPictureBackgroundColor,
+                          image: Image.asset('images/albertEinstein.png'),
                         ),
                       ),
                     ],
@@ -50,11 +52,13 @@ class _InputPageState extends State<InputPage> {
                       Expanded(
                         child: CommonCard(
                           color: kPictureBackgroundColor,
+                          image: Image.asset('images/nelsonMandela.png'),
                         ),
                       ),
                       Expanded(
                         child: CommonCard(
                           color: kPictureBackgroundColor,
+                          image: Image.asset('images/bobMarley.png'),
                         ),
                       ),
                     ],
