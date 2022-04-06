@@ -3,8 +3,6 @@ import 'commonCard.dart';
 import 'constants.dart';
 
 class Bob extends StatelessWidget {
-  const Bob({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +18,7 @@ class Bob extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Container(
-                    child: Text('Bob Marley', style: headerMultiPageTextStyle),
+                    child: Text('Bob Marley', style: kHeaderMultiPageTextStyle),
                     margin: const EdgeInsets.all(15.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
@@ -38,10 +36,11 @@ class Bob extends StatelessWidget {
             flex: 3,
             child: Container(
                 child: Text(
-                  'Description \n \n Hello',
-                  style: descriptionMultiPageTextStyle,
+                  'Description \n \n $bobDescription',
+                  style: kDescriptionMultiPageTextStyle,
                 ),
                 margin: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: kPictureBackgroundColor,

@@ -3,8 +3,6 @@ import 'commonCard.dart';
 import 'constants.dart';
 
 class Albert extends StatelessWidget {
-  const Albert({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +19,7 @@ class Albert extends StatelessWidget {
                   flex: 2,
                   child: Container(
                     child: Text('Albert Einstein',
-                        style: headerMultiPageTextStyle),
+                        style: kHeaderMultiPageTextStyle),
                     margin: const EdgeInsets.all(15.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
@@ -39,10 +37,11 @@ class Albert extends StatelessWidget {
             flex: 3,
             child: Container(
                 child: Text(
-                  'Description',
-                  style: descriptionMultiPageTextStyle,
+                  'Description \n \n $albertDescription',
+                  style: kDescriptionMultiPageTextStyle,
                 ),
                 margin: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: kPictureBackgroundColor,

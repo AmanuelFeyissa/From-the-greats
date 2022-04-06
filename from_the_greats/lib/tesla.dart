@@ -3,8 +3,6 @@ import 'commonCard.dart';
 import 'constants.dart';
 
 class Tesla extends StatelessWidget {
-  const Tesla({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +19,7 @@ class Tesla extends StatelessWidget {
                   flex: 2,
                   child: Container(
                     child:
-                        Text('Nikola Tesla', style: headerMultiPageTextStyle),
+                        Text('Nikola Tesla', style: kHeaderMultiPageTextStyle),
                     margin: const EdgeInsets.all(15.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
@@ -39,10 +37,11 @@ class Tesla extends StatelessWidget {
             flex: 3,
             child: Container(
                 child: Text(
-                  'Description',
-                  style: descriptionMultiPageTextStyle,
+                  'Description \n\n $teslaDescription',
+                  style: kDescriptionMultiPageTextStyle,
                 ),
                 margin: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: kPictureBackgroundColor,
