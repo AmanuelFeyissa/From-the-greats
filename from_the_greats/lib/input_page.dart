@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:from_the_greats/mandela.dart';
+import 'package:quotes/quotes.dart';
 import 'commonCard.dart';
 import 'constants.dart';
 
@@ -9,6 +9,11 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  String refresh() {
+    String quotes = Quotes.getRandom().getContent();
+    return quotes;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +24,26 @@ class _InputPageState extends State<InputPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: CommonCard(
-              color: Color(0xFF584389),
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  refresh();
+                });
+              },
+              child: Container(
+                child: Center(
+                  child: Text(
+                    refresh(),
+                    style: kDescriptionMultiPageTextStyle,
+                  ),
+                ),
+                margin: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color(0xFF584389),
+                ),
+              ),
             ),
           ),
           Expanded(
