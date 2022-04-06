@@ -10,7 +10,10 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   String refresh() {
-    String quotes = Quotes.getRandom().getContent();
+    String quotes = Quotes.getRandom().getContent() +
+        '\n' +
+        '-- ' +
+        Quotes.getRandom().getAuthor();
     return quotes;
   }
 
