@@ -12,28 +12,41 @@ class Tesla extends StatelessWidget {
         title: Text('From the Greats'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
               children: [
                 Expanded(
                   flex: 2,
-                  child: CommonCard(
-                    color: kPictureBackgroundColor,
+                  child: Container(
+                    child:
+                        Text('Nikola Tesla', style: headerMultiPageTextStyle),
+                    margin: const EdgeInsets.all(15.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
                   ),
                 ),
-                Expanded(
-                  child: CommonCard(
-                    color: kPictureBackgroundColor,
-                    image: Image.asset('images/nikolaTesla.png'),
-                  ),
+                CommonCard(
+                  color: kPictureBackgroundColor,
+                  image: Image.asset('images/nikolaTesla.png'),
                 ),
               ],
             ),
           ),
           Expanded(
             flex: 3,
-            child: CommonCard(color: kPictureBackgroundColor),
+            child: Container(
+                child: Text(
+                  'Description',
+                  style: descriptionMultiPageTextStyle,
+                ),
+                margin: const EdgeInsets.all(15.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: kPictureBackgroundColor,
+                )),
           ),
         ],
       ),
