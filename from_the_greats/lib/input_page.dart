@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// Package for collection of quotes
 import 'package:quotes/quotes.dart';
 import 'commonCard.dart';
 import 'constants.dart';
@@ -9,6 +10,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  // A function to refresh every time the quote container is clicked
   String refresh() {
     String quotes = Quotes.getRandom().getContent() +
         '\n' +
@@ -30,6 +32,7 @@ class _InputPageState extends State<InputPage> {
             child: GestureDetector(
               onTap: () {
                 setState(() {
+                  // Changes the quotes everytime when clicked
                   refresh();
                 });
               },
