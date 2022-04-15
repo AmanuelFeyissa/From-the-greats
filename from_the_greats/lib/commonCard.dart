@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// A dart file for the common buttons, for the profile pictures on every page
 class CommonCard extends StatelessWidget {
   late Color? color;
   late Image? image;
