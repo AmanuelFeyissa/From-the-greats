@@ -1,5 +1,5 @@
 # From-the-greats
-Motivation/Inspirational Quotes from the greats
+Motivation/Inspirational Quotes from the greats [School Proj]
 
 
 # How To Run
